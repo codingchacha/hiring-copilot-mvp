@@ -22,21 +22,18 @@ To reduce the time and effort recruiters spend sourcing and screening candidates
 
 ---
 
-## 📁 Project Structure
-/hiring-copilot-mvp
-│
-├── app/ # Core app modules and Streamlit frontend
-│ ├── streamlit_app.py
-│ ├── auth.py
-│ ├── search.py
-│ ├── emailer.py
-│ ├── screening.py
-│ ├── behavior_check.py
-│ ├── mock_data.py
-│ └── utils.py
-│
-├── tests/ # Test scripts
-├── requirements.txt # Python dependencies
-├── README.md # This file
-├── PRD.md # Product Requirements Document
+1 Clone the repository  
+git clone https://github.com/yourusername/hiring-copilot-mvp.git
+cd hiring-copilot-mvp
 
+2 Create and activate a Python virtual environment
+python3 -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+
+3 Install dependencies
+
+pip install -r requirements.txt
+4 add your apikeys in .env folder 
+5 Run the Streamlit app
+
+streamlit run app/streamlit_app.py
