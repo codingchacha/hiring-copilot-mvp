@@ -2,6 +2,8 @@
 import json
 
 def load_candidates(file_path="mock_candidates.json"):
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(current_dir, file_path)
     with open(file_path, "r") as f:
         return json.load(f)
 
@@ -77,7 +79,7 @@ def rank_candidates(candidates, query, top_n=5):
     return [c for score, c in scored_candidates[:top_n]]
 
 
-
+# Format candidates for UI display
 def format_candidates_for_ui(candidates):
     formatted_list = []
     for c in candidates:
