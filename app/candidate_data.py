@@ -1,10 +1,9 @@
-
 import json
 import os
 
 def load_candidates(file_path="mock_candidates.json"):
-    current_dir = os.getcwd()
-    file_path = os.path.join(current_dir, file_path)
+    # Use the correct path for Streamlit Cloud
+    file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), file_path)
     with open(file_path, "r") as f:
         return json.load(f)
 
